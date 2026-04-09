@@ -158,7 +158,6 @@ with col_btn:
 with col_msg:
     if generar_pdf:
         st.success("✅ Generado con éxito!")
-        st.toast("PDF generado ✔")
 
 # CUADROS DE TEXTO
 st.markdown("### 🧾 Datos del Reporte")
@@ -635,5 +634,13 @@ if uploaded_file:
 
         # 👉 SOLO UN SAVE
         c.save()
+
+        with open(nombre_archivo, "rb") as f:
+            st.download_button(
+            label="📥 Descargar PDF",
+            data=f,
+            file_name=nombre_archivo,
+            mime="application/pdf"
+        )
 
         st.success("✅ PDF generado correctamente")
