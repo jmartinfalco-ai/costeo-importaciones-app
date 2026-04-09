@@ -17,8 +17,8 @@ from reportlab.graphics.charts.piecharts import Pie
 
 st.set_page_config(
     page_title="Aramis Coding Company",
-    layout="wide"
-    initial_sidebar_state="collapsed"
+    layout="wide",
+    initial_sidebar_state="collapsed",
 )
 
 # FORZAR MODO OSCURO
