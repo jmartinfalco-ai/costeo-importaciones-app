@@ -92,22 +92,13 @@ button {
     color: white !important;
 }
 
-</style>
-""", unsafe_allow_html=True)
-
-/* =========================
-   TEXTO DENTRO DE BOTONES
-========================= */
-
-/* Streamlit usa spans dentro del botón */
-button span {
-    color: black !important;
-}
-
 /* Para asegurar hover también */
 button:hover span {
     color: black !important;
 }
+
+</style>
+""", unsafe_allow_html=True)
 
 
 # 🌍 IDIOMA
