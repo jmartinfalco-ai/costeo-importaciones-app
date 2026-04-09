@@ -643,7 +643,7 @@ if uploaded_file:
         st.download_button(
             label="📥 Descargar PDF",
             data=buffer,
-            file_name=nombre_archivo,
+            file_name=nombre_pdf,
             mime="application/pdf"
         )
 
