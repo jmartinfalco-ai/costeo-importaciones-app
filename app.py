@@ -21,6 +21,55 @@ st.set_page_config(
     initial_sidebar_state="collapsed",
 )
 
+# =========================
+# 🎨 FIX COLORES FINAL
+# =========================
+st.markdown("""
+<style>
+
+/* Fondo general */
+body, .stApp {
+    background-color: #0e1117;
+}
+
+/* TODO el texto */
+* {
+    color: white !important;
+}
+
+/* Labels */
+label {
+    color: white !important;
+}
+
+/* Inputs */
+input, textarea {
+    color: black !important;
+}
+
+/* Placeholder */
+::placeholder {
+    color: #999 !important;
+}
+
+/* Botones */
+button {
+    color: black !important;
+}
+
+/* File uploader */
+[data-testid="stFileUploader"] {
+    color: white !important;
+}
+
+/* Texto uploader */
+[data-testid="stFileUploader"] span {
+    color: white !important;
+}
+
+</style>
+""", unsafe_allow_html=True)
+
 # FORZAR MODO OSCURO
 st.markdown("""
 <style>
