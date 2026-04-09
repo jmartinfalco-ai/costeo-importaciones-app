@@ -153,7 +153,7 @@ t = textos[idioma]
 col_btn, col_msg = st.columns([1,2])
 
 with col_btn:
-    generar_pdf = st.button("📄 Generar Reporte PDF", key="btn_pdf")
+    generar_pdf = st.button("📥 Generar y Descargar PDF", key="btn_pdf"))
 
 with col_msg:
     if generar_pdf:
@@ -461,7 +461,10 @@ if uploaded_file:
 
     if generar_pdf:
 
-        c = canvas.Canvas(nombre_pdf, pagesize=letter)
+        from io import BytesIO
+
+        buffer = BytesIO()
+        c = canvas.Canvas(buffer)
         width, height = letter
 
         # =========================
@@ -635,10 +638,11 @@ if uploaded_file:
         # 👉 SOLO UN SAVE
         c.save()
 
-        with open(nombre_archivo, "rb") as f:
-            st.download_button(
+        buffer.seek(0)
+
+        st.download_button(
             label="📥 Descargar PDF",
-            data=f,
+            data=buffer,
             file_name=nombre_archivo,
             mime="application/pdf"
         )
