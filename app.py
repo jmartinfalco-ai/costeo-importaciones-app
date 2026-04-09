@@ -21,17 +21,13 @@ st.set_page_config(
     initial_sidebar_state="collapsed",
 )
 
-# =========================
-# 🎨 FIX COLORES FINAL
-# =========================
 st.markdown("""
 <style>
 
 /* =========================
-   BOTONES - HOVER FIX
+   BOTONES
 ========================= */
 
-/* Botones normales */
 button {
     background-color: #ffffff !important;
     color: black !important;
@@ -40,30 +36,33 @@ button {
     transition: 0.2s;
 }
 
-/* Hover (cuando pasás el mouse) */
+/* Hover */
 button:hover {
     background-color: #00ff9f !important;
     color: black !important;
 }
 
-/* Botón activo (click) */
+/* Click */
 button:active {
     background-color: #00cc7a !important;
     color: black !important;
 }
 
-/* Fondo general */
+/* Forzar texto dentro del botón */
+button * {
+    color: black !important;
+}
+
+/* =========================
+   TEMA GENERAL
+========================= */
+
 body, .stApp {
     background-color: #0e1117;
 }
 
-/* TODO el texto */
+/* Texto general */
 * {
-    color: white !important;
-}
-
-/* Labels */
-label {
     color: white !important;
 }
 
@@ -77,24 +76,10 @@ input, textarea {
     color: #999 !important;
 }
 
-/* Botones */
-button {
-    color: black !important;
-}
-
 /* File uploader */
-[data-testid="stFileUploader"] {
-    color: white !important;
-}
-
-/* Texto uploader */
+[data-testid="stFileUploader"],
 [data-testid="stFileUploader"] span {
     color: white !important;
-}
-
-/* Para asegurar hover también */
-button:hover span {
-    color: black !important;
 }
 
 </style>
