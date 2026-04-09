@@ -25,6 +25,7 @@ st.set_page_config(
 # 🎨 FIX COLORES FINAL
 # =========================
 st.markdown("""
+<style>
 
 /* =========================
    BOTONES - HOVER FIX
@@ -50,8 +51,6 @@ button:active {
     background-color: #00cc7a !important;
     color: black !important;
 }
-
-<style>
 
 /* Fondo general */
 body, .stApp {
@@ -96,15 +95,6 @@ button {
 </style>
 """, unsafe_allow_html=True)
 
-# FORZAR MODO OSCURO
-st.markdown("""
-<style>
-body {
-    background-color: #0e1117;
-    color: white;
-}
-</style>
-""", unsafe_allow_html=True)
 
 # 🌍 IDIOMA
 idioma = st.radio(
