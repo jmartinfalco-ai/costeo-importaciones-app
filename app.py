@@ -25,6 +25,32 @@ st.set_page_config(
 # 🎨 FIX COLORES FINAL
 # =========================
 st.markdown("""
+
+/* =========================
+   BOTONES - HOVER FIX
+========================= */
+
+/* Botones normales */
+button {
+    background-color: #ffffff !important;
+    color: black !important;
+    border-radius: 8px !important;
+    border: none !important;
+    transition: 0.2s;
+}
+
+/* Hover (cuando pasás el mouse) */
+button:hover {
+    background-color: #00ff9f !important;
+    color: black !important;
+}
+
+/* Botón activo (click) */
+button:active {
+    background-color: #00cc7a !important;
+    color: black !important;
+}
+
 <style>
 
 /* Fondo general */
