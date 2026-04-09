@@ -109,10 +109,6 @@ button:hover span {
     color: black !important;
 }
 
-button {
-    font-weight: 600;
-    letter-spacing: 0.3px;
-}
 
 # 🌍 IDIOMA
 idioma = st.radio(
