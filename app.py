@@ -18,7 +18,18 @@ from reportlab.graphics.charts.piecharts import Pie
 st.set_page_config(
     page_title="Aramis Coding Company",
     layout="wide"
+    initial_sidebar_state="collapsed"
 )
+
+# FORZAR MODO OSCURO
+st.markdown("""
+<style>
+body {
+    background-color: #0e1117;
+    color: white;
+}
+</style>
+""", unsafe_allow_html=True)
 
 # 🌍 IDIOMA
 idioma = st.radio(
