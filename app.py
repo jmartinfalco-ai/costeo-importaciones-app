@@ -153,7 +153,7 @@ t = textos[idioma]
 col_btn, col_msg = st.columns([1,2])
 
 with col_btn:
-    generar_pdf = st.button("📥 Generar y Descargar PDF", key="btn_pdf"))
+    generar_pdf = st.button("📥 Generar y Descargar PDF", key="btn_pdf")
 
 with col_msg:
     if generar_pdf:
